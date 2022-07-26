@@ -9,44 +9,41 @@
     <title>Javascript Calculator</title>
 </head>
 <body>
-    <header>
+    <header class="head">
         <h1>Calculator</h1>
     </header>
     <main>
-        <section class="Display" id="topScreen">
-            <input>
-            <button></button>
+        <section class="container">
+            <section class="screen">
+                <input type="text" id="display" disabled>
+            </section>
+            <section class="specialButtons">
+                <input type="button" name="reset" value="Reset">
+                <input type="button" name="bs" value="Backspace">	
+            </section>
+            <section class="keypad">
+                <input type="button" name="1" value="1">
+                <input type="button" name="2" value="2">
+                <input type="button" name="3" value="3">
+                <input type="button" name="+" value="+">
+                <input type="button" name="4" value="4">
+                <input type="button" name="5" value="5">
+                <input type="button" name="6" value="6">
+                <input type="button" name="-" value="-">
+                <input type="button" name="7" value="7">
+                <input type="button" name="8" value="8">
+                <input type="button" name="9" value="9">
+                <input type="button" name="*" value="*">
+                <input type="button" name="." value=".">
+                <input type="button" name="0" value="0">
+                <input type="button" name="=" value="=">
+                <input type="button" name="/" value="/">
+            </section>
         </section>
-        <section class="Display" id="789">
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-        </section>
-        <section class="Display" id="456">
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-        </section>
-        <section class="Display" id="123">
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-        </section>
-        <section class="Display" id="0">
-            <button>.</button>
-            <button>0</button>
-            <button>=</button>
-        </section>
-        <section class="Display" id="operators">
-            <button>+</button>
-            <button>-</button>
-            <button>x</button>
-            <button>/</button>
-        </section>
-        <section class="Display" id="history">
+        <section class="Layout" id="history">
             <h3>History</h3>
         </section>
-        <button>Clear History</button>
+        <button onclick="clearHistory();">Clear History</button>
     </main>
 </body>
 </html>
