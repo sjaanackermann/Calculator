@@ -9,41 +9,35 @@
     <title>Javascript Calculator</title>
 </head>
 <body>
-    <header class="head">
-        <h1>Calculator</h1>
-    </header>
     <main>
         <section class="container">
+            <section class="head"><h1>Calculator</h1></section>
             <section class="screen">
-                <input type="text" id="display" disabled>
+                <div id="numDisplay"><span>0</span></div>
             </section>
             <section class="specialButtons">
-                <input type="button" name="reset" value="Reset">
-                <input type="button" name="bs" value="Backspace">	
+                <input type="button" name="reset" value="Reset" onclick="sperform(this.name)">
+                <input type="button" name="bs" value="Backspace" onclick="sperform(this.name)">	
             </section>
             <section class="keypad">
-                <input type="button" name="1" value="1">
-                <input type="button" name="2" value="2">
-                <input type="button" name="3" value="3">
-                <input type="button" name="+" value="+">
-                <input type="button" name="4" value="4">
-                <input type="button" name="5" value="5">
-                <input type="button" name="6" value="6">
-                <input type="button" name="-" value="-">
-                <input type="button" name="7" value="7">
-                <input type="button" name="8" value="8">
-                <input type="button" name="9" value="9">
-                <input type="button" name="*" value="*">
-                <input type="button" name="." value=".">
-                <input type="button" name="0" value="0">
-                <input type="button" name="=" value="=">
-                <input type="button" name="/" value="/">
+                <input type="button" name="1" value="1" onclick="perform(this.name)">
+                <input type="button" name="2" value="2" onclick="perform(this.name)">
+                <input type="button" name="3" value="3" onclick="perform(this.name)">
+                <input type="button" name="+" value="+" onclick="perform(this.name)">
+                <input type="button" name="4" value="4" onclick="perform(this.name)">
+                <input type="button" name="5" value="5" onclick="perform(this.name)">
+                <input type="button" name="6" value="6" onclick="perform(this.name)">
+                <input type="button" name="-" value="-" onclick="perform(this.name)">
+                <input type="button" name="7" value="7" onclick="perform(this.name)">
+                <input type="button" name="8" value="8" onclick="perform(this.name)">
+                <input type="button" name="9" value="9" onclick="perform(this.name)">
+                <input type="button" name="*" value="*" onclick="perform(this.name)">
+                <input type="button" name="." value="." onclick="perform(this.name)">
+                <input type="button" name="0" value="0" onclick="perform(this.name)">
+                <input type="button" name="=" value="=" onclick="perform(this.name)">
+                <input type="button" name="/" value="/" onclick="perform(this.name)">
             </section>
         </section>
-        <section class="Layout" id="history">
-            <h3>History</h3>
-        </section>
-        <button onclick="clearHistory();">Clear History</button>
     </main>
 </body>
 </html>

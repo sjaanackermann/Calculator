@@ -31,12 +31,12 @@ body{
     border-radius: 11px;
     background-color: antiquewhite;
 }
-#numdisplay{    
+#numDisplay{    
 	height: 42px;
     text-align: right;
     font: normal normal 43px Arial;
 }
-#numdisplay span{
+#numDisplay span{
 	opacity: 0.5;
 }
 .keypad {
@@ -59,12 +59,12 @@ input:hover{
 	background-color: silver;
 }
 
-.specialbuttons{
+.specialButtons{
     height: 50px;
     width: 300px;
     margin: 0px auto;
 }
-.specialbuttons input{
+.specialButtons input{
     width: 143px;
     font-size: 20px;
 }
