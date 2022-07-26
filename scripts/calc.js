@@ -1,34 +1,44 @@
-let a="",b="";
+let numA="",numB="";
 let sign="";
+const decimal = document.querySelector('#decimal');
+const dot_button = document.querySelector('.disable')
+let clickDecimal = false;
+let operator = '';
+let dot_count = 1;
 
 function operate() {
     switch(sign)
-    {
+    {   case '.':
+            if (input === '.' && dot_count === 1) {
+            dot_count--;
+            dot_button.setAttribute('disabled', true);
+            }
+            break;
         case '+':
-            a=String(Number(a)+Number(b))
-			document.getElementById('numDisplay').innerHTML=a;
-			b="";sign="";
+            numA=String(Number(numA)+Number(numB))
+			document.getElementById('numDisplay').innerText=numA;
+			numB="";sign="";
 			break;
 		case '-':
-			a=String(Number(a)-Number(b))
-			document.getElementById('numDisplay').innerHTML=a;
-			b="";sign="";
+			numA=String(Number(numA)-Number(numB))
+			document.getElementById('numDisplay').innerText=numA;
+			numB="";sign="";
 			break;
 		case '*':
-			a=String(Number(a)*Number(b))
-			document.getElementById('numDisplay').innerHTML=a;
-			b="";sign="";
+			numA=String(Number(numA)*Number(numB))
+			document.getElementById('numDisplay').innerText=numA;
+			numB="";sign="";
 			break;
 		case '/':
-			if(b=='0')
+			if(numB=='0')
 			{
-			document.getElementById('numDisplay').innerHTML="Invalid!";
-			a="";b="";c="";
+			document.getElementById('numDisplay').innerText="Invalid!";
+			numA="";numB="";c="";
 			break;
             }else{
-				a=String(Number(a)/Number(b))
-				document.getElementById('numDisplay').innerHTML=a;
-				b="";sign="";
+				numA=String(Number(numA)/Number(numB))
+				document.getElementById('numDisplay').innerText=numA;
+				numB="";sign="";
 				break;
 		    }
 	}
@@ -36,54 +46,54 @@ function operate() {
 
 function perform(m) {
 	if(m=="=") {
-        if((a!="")&(b!="")) {
+        if((numA!="")&(numB!="")) {
 			operate();
 		}
-	} else if((m=="+")||(m=="-")||(m=="*")||(m=="/")) {
-		if((a!="")&&(b==""))
+	}else if((m=="+")||(m=="-")||(m=="*")||(m=="/")) {
+		if((numA!="")&&(numB==""))
 		{
 			sign=m;
-			document.getElementById('numDisplay').innerHTML=a+sign;
-		} else if((a!="")&&(b!="")){
+			document.getElementById('numDisplay').innerText=numA+sign;
+		}else if((numA!="")&&(numB!="")){
 			operate();
 			sign=m;
-			document.getElementById('numDisplay').innerHTML=a+sign;
+			document.getElementById('numDisplay').innerText=numA+sign;
 		}
-	} else {
+	}else {
 		if(sign=="") {
-			a=a+m;
-			document.getElementById('numDisplay').innerHTML=a;
-		} else {
-			b=b+m;
-			document.getElementById('numDisplay').innerHTML=a+sign+b;
+			numA=numA+m;
+			document.getElementById('numDisplay').innerText=numA;
+		}else {
+			numB=numB+m;
+			document.getElementById('numDisplay').innerText=numA+sign+numB;
 		}
 	}
 }
 
-function sperform(m) {
+function specialButton(m) {
 	switch(m) {
 		case 'reset':
 			location.reload();
 			break;
 		case 'bs':
-			if((a!="")&&(sign!="")) {
-				if(b=="") {
-					sign="";
-					document.getElementById('numDisplay').innerHTML=a;
-				} else {
-					var bx= new Array();
-					bx=b.split("");
+		if((numA!="")&&(sign!="")) {
+			if(numB=="") {
+				sign="";
+				document.getElementById('numDisplay').innerText=numA;
+				}else {
+					let bx= new Array();
+					bx=numB.split("");
 					bx.pop();
-					b=bx.join("");
-					document.getElementById('numDisplay').innerHTML=a+sign+b;
+					numB=bx.join("");
+					document.getElementById('numDisplay').innerText=numA+sign+numB;
 				}
-			} else if((a!="")&&(sign=="")) {
-				var ax=new Array();
-				ax=a.split("");
-				ax.pop();
-				a=ax.join("");
-				document.getElementById("numDisplay").innerHTML=a;
+		}else if((numA!="")&&(sign=="")) {
+			let ax=new Array();
+			ax=numA.split("");
+			ax.pop();
+			numA=ax.join("");
+			document.getElementById("numDisplay").innerText=numA;
 			}
-			break;
+		break;
 	}
 }

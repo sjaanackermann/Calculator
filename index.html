@@ -10,32 +10,32 @@
 </head>
 <body>
     <main>
-        <section class="container">
-            <section class="head"><h1>Calculator</h1></section>
-            <section class="screen">
-                <div id="numDisplay"><span>0</span></div>
+        <section class="calculator-container">
+            <section class="head" id="title"><h1>Calculator</h1></section>
+            <section class="display-container">
+                <p id='display'>000000000000</p>
             </section>
             <section class="specialButtons">
-                <input type="button" name="reset" value="Reset" onclick="sperform(this.name)">
-                <input type="button" name="bs" value="Backspace" onclick="sperform(this.name)">	
+                <input type="button" name="reset" value="Reset" id="clear">
+                <input type="button" name="bs" value="Backspace" id="backspace">	
             </section>
             <section class="keypad">
-                <input type="button" name="1" value="1" onclick="perform(this.name)">
-                <input type="button" name="2" value="2" onclick="perform(this.name)">
-                <input type="button" name="3" value="3" onclick="perform(this.name)">
-                <input type="button" name="+" value="+" onclick="perform(this.name)">
-                <input type="button" name="4" value="4" onclick="perform(this.name)">
-                <input type="button" name="5" value="5" onclick="perform(this.name)">
-                <input type="button" name="6" value="6" onclick="perform(this.name)">
-                <input type="button" name="-" value="-" onclick="perform(this.name)">
-                <input type="button" name="7" value="7" onclick="perform(this.name)">
-                <input type="button" name="8" value="8" onclick="perform(this.name)">
-                <input type="button" name="9" value="9" onclick="perform(this.name)">
-                <input type="button" name="*" value="*" onclick="perform(this.name)">
-                <input type="button" name="." value="." onclick="perform(this.name)">
-                <input type="button" name="0" value="0" onclick="perform(this.name)">
-                <input type="button" name="=" value="=" onclick="perform(this.name)">
-                <input type="button" name="/" value="/" onclick="perform(this.name)">
+                <input type="button" name="1" value="1" id="one">
+                <input type="button" name="2" value="2" id="two">
+                <input type="button" name="3" value="3" id="three">
+                <input type="button" name="+" value="+" id="plus">
+                <input type="button" name="4" value="4" id="four">
+                <input type="button" name="5" value="5" id="five">
+                <input type="button" name="6" value="6" id="six">
+                <input type="button" name="-" value="-" id="minus">
+                <input type="button" name="7" value="7" id="seven">
+                <input type="button" name="8" value="8" id="eight">
+                <input type="button" name="9" value="9" id="nine">
+                <input type="button" name="*" value="*" id="multiply">
+                <input type="button" name="." value="." id="dot">
+                <input type="button" name="0" value="0" id="zero">
+                <input type="button" name="=" value="=" id="equals">
+                <input type="button" name="/" value="/" id="divide">
             </section>
         </section>
     </main>
