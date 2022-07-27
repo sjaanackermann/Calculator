@@ -87,3 +87,25 @@ function exponent(numA, numB) {
 function precise(x) {
   return (Number.parseFloat(x).toPrecision(7));
 }
+
+function operate(operand, numA, numB) {
+  let answer = 0;
+  switch (operand) {
+      case 'ADD':
+          answer = add(numA, numB);
+          break;
+      case 'SUBS':
+          answer = substract(numA, numB);
+          break;
+      case 'DIV':
+          answer = divide(numA, numB);
+          break;
+      case 'MLTP':
+          answer = multiply(numA, numB);
+          break;
+      case 'EXP':
+          answer = exponent(numA, numB);
+          break;
+  }
+  return answer;
+}
