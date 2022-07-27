@@ -10,32 +10,76 @@
 </head>
 <body>
     <main>
-        <section class="calculator-container">
-            <section class="head" id="title"><h1>Calculator</h1></section>
-            <section class="display-container">
-                <p id='display'>000000000000</p>
+        <section id="frame">
+            <section id="display">
+                <section id="first-line"><span id="flt" class="fl-text"></span></section>
+                <section id="second-line"><span id="slt" class="sl-text">0</span></section>
             </section>
-            <section class="specialButtons">
-                <input type="button" name="reset" value="Reset" id="clear">
-                <input type="button" name="bs" value="Backspace" id="backspace">	
-            </section>
-            <section class="keypad">
-                <input type="button" name="1" value="1" id="one">
-                <input type="button" name="2" value="2" id="two">
-                <input type="button" name="3" value="3" id="three">
-                <input type="button" name="+" value="+" id="plus">
-                <input type="button" name="4" value="4" id="four">
-                <input type="button" name="5" value="5" id="five">
-                <input type="button" name="6" value="6" id="six">
-                <input type="button" name="-" value="-" id="minus">
-                <input type="button" name="7" value="7" id="seven">
-                <input type="button" name="8" value="8" id="eight">
-                <input type="button" name="9" value="9" id="nine">
-                <input type="button" name="*" value="*" id="multiply">
-                <input type="button" name="." value="." id="dot">
-                <input type="button" name="0" value="0" id="zero">
-                <input type="button" name="=" value="=" id="equals">
-                <input type="button" name="/" value="/" id="divide">
+            <section id="keys">
+                <section class="row">
+                    <section  data-value="AC" id="AC" class="calc-btn clear">
+                        <button class="calc-text">Clear</button>
+                    </section>
+                    <section  data-value="BKSP" id="BKSP" class="calc-btn bckspace">
+                        <button class="calc-text">Backspace</button>
+                    </section>
+                </section>
+                <section class="row">
+                    <section data-value="7"  class="calc-btn digit">
+                        <button class="calc-text">7</button>
+                    </section>
+                    <section data-value="8"  class="calc-btn digit">
+                        <button class="calc-text">8</button>
+                    </section>
+                    <section data-value="9"  class="calc-btn digit">
+                        <button class="calc-text">9</button>
+                    </section>
+                    <section data-value="MLTP"  class="calc-btn operand">
+                        <button class="calc-text">*</button>
+                    </section>
+                </section>
+                <section class="row">
+                    <section data-value="4"  class="calc-btn digit">
+                        <button class="calc-text">4</button>
+                    </section>
+                    <section data-value="5"  class="calc-btn digit">
+                        <button class="calc-text">5</button>
+                    </section>
+                    <section data-value="6"  class="calc-btn digit">
+                        <button class="calc-text">6</button>
+                    </section>
+                    <section data-value="SUBS"  class="calc-btn operand">
+                        <button class="calc-text">—</button>
+                    </section>
+                </section>
+                <section class="row">
+                    <section data-value="1"  class="calc-btn digit">
+                        <button class="calc-text">1</button>
+                    </section>
+                    <section data-value="2"  class="calc-btn digit">
+                        <button class="calc-text">2</button>
+                    </section>
+                    <section data-value="3"  class="calc-btn digit">
+                        <button class="calc-text">3</button>
+                    </section>
+                    <section data-value="ADD"  class="calc-btn operand">
+                        <button class="calc-text">+</button>
+                    </section>
+                </section>
+                <section class="row">
+                    <section data-value="."  class="calc-btn operand">
+                        <button class="calc-text">.</button>
+                    </section>
+                    <section data-value="0"  class="calc-btn digit">
+                        <button class="calc-text">0</button>
+                    </section>
+                    <section data-value="EQL"  class="calc-btn operand">
+                        <button class="calc-text">=</button>
+                    </section>
+                    <section data-value="DIV"  class="calc-btn operand">
+                        <button class="calc-text">/</button>
+                    </section>
+                </section>
             </section>
         </section>
     </main>
